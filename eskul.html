@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eskul - Platform Komunitas & Kegiatan Siswa</title>
+  <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="theme-eskul">
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Eskul</h1>
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="komunitas.html">Komunitas</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="anggota.html">Profil</a>
+        <a href="eskul.html">Eskul</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Ekstrakurikuler (Eskul)</h2>
+    <p class="lead">Informasi lengkap tentang ekstrakurikuler, jadwal latihan, dan cara bergabung.</p>
+
+    <section class="section">
+      <h3>Daftar Eskul (Editable)</h3>
+      <p class="small-muted">Daftar eskul di bawah dapat ditambah atau dihapus. Gunakan form di atas setiap kartu untuk menambah eskul baru.</p>
+      <div id="eskulList" class="grid cards"></div>
+    </section>
+
+    <section id="eskul-register" class="sub-section">
+      <h3>Form Pendaftaran Eskul</h3>
+      <form id="formEskulRegister">
+        <label>Nama Siswa<br><input name="studentName" required></label><br>
+        <label>Kelas<br><input name="kelas" required placeholder="contoh: 11 IPA 2"></label><br>
+        <label>Pilih Eskul<br>
+          <select name="eskulId" required>
+            <option value="">-- pilih --</option>
+          </select>
+        </label><br>
+        <label>Catatan / Alasan (opsional)<br><textarea name="note" rows="2"></textarea></label><br>
+        <div style="margin-top:8px">
+          <button class="btn">Daftar</button>
+        </div>
+      </form>
+
+      <h4 style="margin-top:12px">Pendaftar</h4>
+      <div id="eskulRegistrations"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 - Platform Komunitas & Kegiatan Siswa</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
+  <!-- Modal (used for friendly confirmations and edit forms) -->
+  <div id="appModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <header class="modal-header"><h3 id="modalTitle"></h3></header>
+      <div id="modalBody" class="modal-body"></div>
+      <footer class="modal-footer">
+        <button id="modalCancel" class="btn outline">Batal</button>
+        <button id="modalConfirm" class="btn">OK</button>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

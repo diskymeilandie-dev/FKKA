@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Komunitas - Platform Komunitas & Kegiatan Siswa</title>
+  <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="theme-komunitas">
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Komunitas</h1>
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="komunitas.html">Komunitas</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="anggota.html">Profil</a>
+        <a href="eskul.html">Eskul</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Daftar Komunitas</h2>
+    <p class="lead">Pilih komunitas berdasarkan minat dan lihat informasi singkat serta jadwal latihan.</p>
+
+    <section class="grid cards">
+      <article class="card">
+        <h3>Baseball</h3>
+        <p>Permainan yang membutuhkan kerja sama dan kekuatan fisik yang cukup.</p>
+      </article>
+      <article class="card">
+        <h3>Pentas Seni</h3>
+        <p>Seni pertunjukan: teater, tari, dan musik. Ekspresikan kreativitasmu di sini.</p>
+      </article>
+      <article class="card">
+        <h3>Klub Literasi</h3>
+        <p>Diskusi buku, penulisan kreatif, dan kegiatan literasi lain.</p>
+      </article>
+      <article class="card">
+        <h3>klub Musical</h3>
+        <p>Merasakan irama yang merdu terlintas di telinga anda, dan mengatur temponya untuk membuat irama tersebut menjadi lebih mantap.</p>
+      </article>
+    </section>
+    
+      <!-- Dynamic community list (editable) -->
+      <h3>Daftar Komunitas (Editable)</h3>
+      <div id="communityList" class="grid cards"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 - Platform Komunitas & Kegiatan Siswa</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
+  <!-- Modal (used for friendly confirmations and edit forms) -->
+  <div id="appModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <header class="modal-header"><h3 id="modalTitle"></h3></header>
+      <div id="modalBody" class="modal-body"></div>
+      <footer class="modal-footer">
+        <button id="modalCancel" class="btn outline">Batal</button>
+        <button id="modalConfirm" class="btn">OK</button>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
